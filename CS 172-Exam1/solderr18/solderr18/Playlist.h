@@ -36,7 +36,7 @@ public:
 	//add a new song
 	void addSong(Song newSong) { 
 		if (numSongs < 100) { //INFINITE LOOP >>>???????
-			song[numSongs];
+			song[numSongs] = newSong;
 			numSongs++;
 		}
 	}
