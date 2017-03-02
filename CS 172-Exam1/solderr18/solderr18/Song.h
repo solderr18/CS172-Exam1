@@ -19,14 +19,10 @@ public:
 	Song(string title, string artist, string genre) { //to allow caller to set up song
 		Title = title;
 		Artist = artist;
-		do {
-			if (genre == "ModernPop" || genre == "Grunge" || genre == "Classical" || genre == "Americana")
-				Genre = genre;
-			else {
-				cout << "The selected genre is no good. The options are ModernPop, Grunge, Classical, and American.\n What genre is your song? ";
-				cin >> genre;
-			}
-		} while (genre != "ModernPop" && genre != "Grunge" && genre != "Classical" || genre != "Americana");
+		if (genre == "ModernPop" || genre == "Grunge" || genre == "Classical" || genre == "Americana")
+			Genre = genre;
+		else
+			genre = "ModernPop"; //default
 	}
 	//const get fxns
 	const string getTitle() { return Title; }
